@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+  </head>
+  <body id="page2">
+    <div class="container">
+      <!-- image section -->
+      <section class="hero">
+        <img src="../assets/images/Placeholderimage2.png" alt="" />
+      </section>
+
+      <!-- header and caption section -->
+      <section class="head-subhead">
+        <h2>Create Account</h2>
+        <div class="caption">
+          Go ahead and sign up, let everyone know how awesome you are!
+        </div>
+
+        <!-- account creation form  -->
+        <form action="">
+          <label for="">
+            <img src="../assets/icons/UseruserIcon.svg" alt="" />
+            <input
+              onkeyup="usernameValidator()"
+              id="username"
+              type="text"
+              placeholder="Username"
+            />
+          </label>
+          <div id="username-validation-messages">
+            <p id="username-length" class="invalid">
+              between 5 to 15 characters
+            </p>
+            <p id="username-alphanumeric" class="invalid">
+              contains only letters and numbers
+            </p>
+            <p id="username-startsendsstring" class="invalid">
+              no numbers at beginning or end
+            </p>
+          </div>
+          <label for="">
+            <img src="../assets/icons/EnvelopeSimpleemailIcon.svg" alt="" />
+            <input
+              id="email"
+              type="email"
+              placeholder="Email"
+              onkeyup="emailValidator()"
+            />
+          </label>
+          <div id="email-validation-messages">
+            <p id="email-format" class="invalid">
+              email must match this format example@mail.com
+            </p>
+          </div>
+          <label for="">
+            <img src="../assets/icons/LockKeypasswordIcon.png" alt="" />
+            <input
+              id="password1"
+              type="password"
+              placeholder="Password"
+              onkeyup="password1Validator()"
+            />
+          </label>
+          <div id="password1-validation-messages">
+            <p id="password1-length" class="invalid">
+              password must be at least 8 characters long
+            </p>
+          </div>
+          <label for="">
+            <img src="../assets/icons/LockKeypasswordIcon.png" alt="" />
+            <input
+              id="password2"
+              type="password"
+              placeholder="Confirm password"
+              onKeyup="password2Validator()"
+            />
+          </label>
+          <div id="password2-validation-messages">
+            <p id="password2-value" class="invalid">password matches</p>
+          </div>
+          <button id="submit" type="submit" class="button">
+            Create Account
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <script src="../scripts/createAccount.js"></script>
+  </body>
+</html>
